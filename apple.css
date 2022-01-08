@@ -1,0 +1,133 @@
+/* 루트 선언, 수치적인 변수는 해당 루트 사용 권장 */
+:root {
+  /* size */
+  --menu_font_size: 10px;
+  --Pro_font_sie: 4em;
+
+  /* color */
+  --menu_font_color: rgb(172, 172, 172);
+  --menu_bar_color: #333333;
+
+  /* animation */
+  --btn_transition:200ms ease-out;
+}
+}
+
+/* 전체적으로 적용할 코드 */
+* {
+  background-color: white;
+}
+
+/* 현재, 폰트 적용은 x 애플고딕 사용법 찾는 중 */
+body {
+  text-align: center;
+  font-family: "Apple Gothic";
+  overflow-x: hidden;
+}
+
+.top_menu {
+  background-color: #333333;
+  
+}
+
+/* 상단 메뉴바, 링크 걸어서 이동 가능하게 제작 예정 */
+.top_btn {
+  display: inline;
+  background-color: transparent;
+  color: var(--menu_font_color);
+  border: 0;
+  padding: 0px 10px;
+  margin: 10px 10px;
+  font-size: var(--menu_font_size);
+  transition: var(--btn_transition)
+}
+
+/* 이미지와 텍스트 높이를 맞추기 위해선 버티컬 얼라인 사용, Png 파일 적용 위해서는 투명 적용  */
+.top_img {
+  vertical-align: middle;
+  position: relative;
+  width: 25px;
+  background-color: transparent;
+}
+
+.top_btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*상단 반응형 메뉴바 */
+.sticky_container {
+  position: sticky;
+  top: 0;
+}
+
+.sticky_menu {
+  margin: 0;
+  max-width: auto;
+  padding: 12px 0px 6px 0px;
+  opacity: 0.9;
+  border-bottom: 0.5px solid gray;
+  background-color: white;
+  backdrop-filter: blur(60px);
+}
+
+.sticky_text {
+  font-size: calc(var(--menu_font_size) * 2.2);
+  margin-right: 50%;
+  font-weight: 600;
+}
+
+.sticky_btn {
+  border: 0;
+  background-color: transparent;
+  transition: var(--btn_transition)
+}
+
+/* 패딩 마진 한줄에 기입시 상우하좌, 시계방향 */
+.sticky_buy {
+  color: white;
+  background-color: #127ce5;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.sticky_btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.part_one {
+  margin-top: 100px;
+}
+
+.Pro {
+  font-size: calc(var(--menu_font_size) * 3);
+  font-weight: 350;
+  padding: 30px;
+}
+
+.Pro_text {
+  font-size: var(--Pro_font_sie);
+  font-weight: bolder;
+}
+
+.Pro_img1 {
+  width: 100%;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+/* 파트 2 작업 시작라인 */
+.part_two {
+  margin-top: 10%;
+}
+
+.Pro_img2 {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
+.Pro_text2{
+
+}
