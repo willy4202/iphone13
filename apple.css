@@ -9,8 +9,12 @@
   --menu_bar_color: #333333;
 
   /* animation */
-  --btn_transition:200ms ease-out;
-}
+  --btn_transition: 200ms ease-out;
+
+  /* margin */
+  --part_margin: 5%;
+  --part2_text_margin: 3% 15% 0 15%;
+  --part2_text_weight: 650;
 }
 
 /* 전체적으로 적용할 코드 */
@@ -27,7 +31,6 @@ body {
 
 .top_menu {
   background-color: #333333;
-  
 }
 
 /* 상단 메뉴바, 링크 걸어서 이동 가능하게 제작 예정 */
@@ -39,14 +42,14 @@ body {
   padding: 0px 10px;
   margin: 10px 10px;
   font-size: var(--menu_font_size);
-  transition: var(--btn_transition)
+  transition: var(--btn_transition);
 }
 
 /* 이미지와 텍스트 높이를 맞추기 위해선 버티컬 얼라인 사용, Png 파일 적용 위해서는 투명 적용  */
 .top_img {
   vertical-align: middle;
   position: relative;
-  width: 25px;
+  width: 2%;
   background-color: transparent;
 }
 
@@ -57,8 +60,10 @@ body {
 
 /*상단 반응형 메뉴바 */
 .sticky_container {
+  position: relative;
   position: sticky;
   top: 0;
+  z-index: 4;
 }
 
 .sticky_menu {
@@ -80,7 +85,7 @@ body {
 .sticky_btn {
   border: 0;
   background-color: transparent;
-  transition: var(--btn_transition)
+  transition: var(--btn_transition);
 }
 
 /* 패딩 마진 한줄에 기입시 상우하좌, 시계방향 */
@@ -97,7 +102,7 @@ body {
 }
 
 .part_one {
-  margin-top: 100px;
+  margin-top: var(--part_margin);
 }
 
 .Pro {
@@ -108,26 +113,130 @@ body {
 
 .Pro_text {
   font-size: var(--Pro_font_sie);
-  font-weight: bolder;
+  font-weight: 800;
 }
 
-.Pro_img1 {
+/* 아래 사진과 동영상은 같은 재료, 다만 연출 방식이 달라 임의로 설정해둔 것 */
+/* .Pro_img1 {
   width: 100%;
-  margin-top: 10%;
-  margin-left: 15%;
+  margin: 5% 0px 0px 10%;
+} */
+
+.vi {
+  /* margin: 5% 0px 0px; */
 }
 
 /* 파트 2 작업 시작라인 */
 .part_two {
-  margin-top: 10%;
+  margin-top: calc(var(--part_margin) * 2);
+  position: relative;
 }
 
 .Pro_img2 {
   position: relative;
-  z-index: 0;
+  transform: translate(50, 50);
   width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.Pro_text2{
+/* 글자 자간 설정, 라인 바꿈 */
+.Pro_text2 {
+  position: absolute;
+  top: 10%;
+  margin: var(--part2_text_margin);
+  font-size: calc(1.2 * var(--Pro_font_sie));
+  background-color: transparent;
+  color: white;
+  /* opacity: 80%; */
+  text-align: start;
+  line-height: calc(var(--Pro_font_sie) / 3.5);
+  font-weight: var(--part2_text_weight);
+}
 
+.Pro_text2_2 {
+  position: absolute;
+  bottom: 5%;
+  margin: var(--part2_text_margin);
+  background-color: transparent;
+  color: white;
+  font-size: calc(var(--menu_font_size) * 2);
+  text-align: start;
+  font-weight: var(--part2_text_weight);
+}
+
+/* Png 파일 색상반전 적용 */
+.play_img {
+  background-color: transparent;
+  vertical-align: middle;
+  width: 3%;
+  color: white;
+  filter: brightness(0) invert(1);
+}
+
+/* 파트3 시작 라인 */
+
+.part_three {
+}
+
+.part_3_img {
+  position: relative;
+  margin-top: calc(var(--Pro_font_sie) * 1.5);
+}
+
+.max3image {
+  position: absolute;
+  z-index: 0;
+  background-color: transparent;
+  top: 0;
+  left: 30%;
+  transition: 300ms ease;
+}
+
+.pro3image {
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  right: 30%;
+  top: calc(var(--Pro_font_sie));
+  transition: 300ms ease;
+}
+
+.part_3_img:hover .max3image {
+  transform: translateX(-55px);
+}
+.part_3_img:hover .pro3image {
+  transform: translateX(55px);
+}
+
+.maxtext {
+  position: absolute;
+  padding-top: 23%;
+  left: 10%;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.protext {
+  position: absolute;
+  padding-top: 23%;
+  right: 10%;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.pro6 {
+  padding-top: calc(var(--Pro_font_sie) / 15);
+  font-size: var(--Pro_font_sie);
+  font-weight: var(--part2_text_weight);
+  background-color: transparent;
+}
+
+.part_3_text {
+  display: flex;
+  justify-content: center;
+  padding-top: 57%;
+  font-size: calc(var(--menu_font_size) * 2);
+  font-weight: 700;
+  margin: calc(var(--Pro_font_sie) / 2);
 }
