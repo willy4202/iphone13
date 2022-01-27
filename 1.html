@@ -6,11 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>image on Text Test</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
+<style>
+    /* .tras {
+        width: 50vw;
+        height: 100vh;
+        background-color: aqua;
+        border: 1px solid black;
+        animation-name: change;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        float: right;
+    }
+
+    @keyframes change {
+        from {
+            background-color: aqua;
+            border: 1px solid black;
+        }
+
+        to {
+            background-color: coral;
+            border: 3px solid red;
+            border-radius: 50%;
+        }
+    } */
+
+    #detail[open] {
+        background-color: #cdedfd background-image: linear-gradient(#cdedfd 0%, #ffec82 40%, #ffcfd2 100%);
+    }
+</style>
+
+<script>
+
+
+    // // 함수 선언
+    // // add 함수에서 전달받은 sum 값을 result 하는 것
+    // // 전달받을 때, 변수 선언을 해주고 콘솔 값을 처리해주면 된다.
+
+    // function hi() {
+    //     const result = add(2, 4)
+    //     console.log(result)
+    // }
+
+    // // 인자 전달
+    // function add(a, b) {
+    //     const sum = a + b;
+    //     return sum;
+    // }
+
+    // // 함수 호출
+    // // 인자 전달용 함수를 선언 함수에 집어넣어준다.
+    // // 받은 함수에서는 인자로 이름을 무엇이라 설정해도 상관없다. 다만 같은 이름이 표시되어야 한다.
+    // // hi(add);
+    // hi(add);
+
+    // 함수 선언
+    function hi() {
+        const result = add(2, 4)
+        console.log(result)
+    }
+    // 인자 전달
+    function add(a, b) {
+        return a + b;
+    }
+
+    //함수 호출
+    hi(add);
+
+</script>
 
 
 <body>
     <video id="vi" src="img/istart.mp4" autoplay muted width="100%"></video>
+    <button id="b">Click me</button>
+    <input type="week">
+    <input type="date">
+    <input type="month">
+    <input type="time">
+
+    <details id=detail>
+        <summary>디테일 태그안에 섬머리는 보입니다</summary>
+        <p>클릭하면 다른게 보입니다.</p>
+    </details>
+
 </body>
+
+
 
 </html>

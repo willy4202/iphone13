@@ -35,7 +35,7 @@ body {
 
 /* 상단 메뉴바, 링크 걸어서 이동 가능하게 제작 예정 */
 .top_btn {
-  display: inline;
+  /* display: inline; */
   background-color: transparent;
   color: var(--menu_font_color);
   border: 0;
@@ -70,7 +70,6 @@ body {
   margin: 0;
   max-width: auto;
   padding: 12px 0px 6px 0px;
-  opacity: 0.9;
   border-bottom: 0.5px solid gray;
   background-color: white;
   backdrop-filter: blur(60px);
@@ -85,6 +84,7 @@ body {
 .sticky_btn {
   border: 0;
   background-color: transparent;
+  back
   transition: var(--btn_transition);
 }
 
@@ -239,4 +239,25 @@ body {
   font-size: calc(var(--menu_font_size) * 2);
   font-weight: 700;
   margin: calc(var(--Pro_font_sie) / 2);
+}
+
+/* 스크롤 다운 애니메이션, 파트3에 적용 예정 
+현재는 호버 형으로만 적용된 상태.*/
+
+
+/* 파트4 시작 */
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.camerablue{
+  background-color: black;
+  margin-top: 1fr;
+  position: relative;
+  display: grid;
 }
