@@ -1,4 +1,8 @@
-# apple
+# apple의 아이폰 13프로 광고
 
+아이폰 13프로 산 기념으로 광고 페이지 따라 만들고 싶었습니다.
 
- https://young970102.github.io/iphone13/
+css만으로 구현하는게 노가다라는 것을  배웠습니다.
+다음부터는 부트스트랩 활용해서 만들면 쉬울 듯 합니다.
+
+https://willy4202.github.io/iphone13/
